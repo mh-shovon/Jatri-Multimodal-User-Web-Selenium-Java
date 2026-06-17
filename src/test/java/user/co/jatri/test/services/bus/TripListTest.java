@@ -3,7 +3,7 @@ package user.co.jatri.test.services.bus;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import user.co.jatri.pages.home.HomePage;
-import user.co.jatri.pages.service.bus.TripListPage;
+import user.co.jatri.pages.services.bus.TripListPage;
 import user.co.jatri.test.base.BaseTest;
 
 public class TripListTest extends BaseTest {

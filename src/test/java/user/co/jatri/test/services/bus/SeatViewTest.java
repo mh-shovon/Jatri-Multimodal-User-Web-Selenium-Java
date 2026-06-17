@@ -4,7 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import user.co.jatri.pages.home.HomePage;
 import user.co.jatri.pages.payment.SelectingPaymentMethodPage;
-import user.co.jatri.pages.service.bus.SeatViewPage;
+import user.co.jatri.pages.services.bus.SeatViewPage;
 import user.co.jatri.test.base.BaseTest;
 
 public class SeatViewTest extends BaseTest {

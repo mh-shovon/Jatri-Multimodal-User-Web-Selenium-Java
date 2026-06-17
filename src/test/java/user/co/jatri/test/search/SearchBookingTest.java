@@ -4,7 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import user.co.jatri.pages.home.HomePage;
 import user.co.jatri.pages.search.SearchBookingPage;
-import user.co.jatri.pages.service.ServiceSelectionPage;
+import user.co.jatri.pages.services.ServiceSelectionPage;
 import user.co.jatri.test.base.BaseTest;
 import user.co.jatri.utils.MultimodalUserUtil;
 

@@ -1,4 +1,4 @@
-package user.co.jatri.pages.service.bus;
+package user.co.jatri.pages.services.bus;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

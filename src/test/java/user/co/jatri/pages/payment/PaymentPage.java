@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import user.co.jatri.pages.service.bus.BookingSuccessOrFailedPage;
+import user.co.jatri.pages.services.bus.BookingSuccessOrFailedPage;
 import user.co.jatri.pages.base.BasePage;
 
 public class PaymentPage extends BasePage {

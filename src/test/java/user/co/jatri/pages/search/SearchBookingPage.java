@@ -2,8 +2,8 @@ package user.co.jatri.pages.search;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import user.co.jatri.pages.service.ServiceSelectionPage;
-import user.co.jatri.pages.service.bus.TripListPage;
+import user.co.jatri.pages.services.ServiceSelectionPage;
+import user.co.jatri.pages.services.bus.TripListPage;
 import user.co.jatri.pages.base.BasePage;
 import user.co.jatri.utils.MultimodalUserUtil;
 

@@ -1,4 +1,4 @@
-package user.co.jatri.test.bus;
+package user.co.jatri.test.services.bus;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;

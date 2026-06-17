@@ -1,4 +1,4 @@
-package user.co.jatri.test;
+package user.co.jatri.test.base;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -14,8 +14,8 @@ import org.openqa.selenium.safari.SafariDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import user.co.jatri.pages.BasePage;
-import user.co.jatri.pages.Page;
+import user.co.jatri.pages.base.BasePage;
+import user.co.jatri.pages.base.Page;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -25,8 +25,8 @@ import java.util.Properties;
 
 public class BaseTest {
     WebDriver driver;
-    Page page;
-    private Properties properties;
+    public Page page;
+    final Properties properties;
 
     public BaseTest() {
         properties = new Properties();

@@ -1,9 +1,10 @@
-package user.co.jatri.test;
+package user.co.jatri.test.auth;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import user.co.jatri.pages.HomePage;
-import user.co.jatri.pages.LoginPage;
+import user.co.jatri.pages.home.HomePage;
+import user.co.jatri.pages.auth.LoginPage;
+import user.co.jatri.test.base.BaseTest;
 import user.co.jatri.utils.MultimodalUserUtil;
 
 public class LoginTest extends BaseTest {

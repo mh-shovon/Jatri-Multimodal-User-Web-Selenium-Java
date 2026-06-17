@@ -1,4 +1,4 @@
-package user.co.jatri.pages;
+package user.co.jatri.pages.base;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,9 +12,9 @@ import java.time.Duration;
 import java.util.List;
 
 public abstract class Page {
-    WebDriver driver;
+    public WebDriver driver;
 
-    WebDriverWait wait;
+    public WebDriverWait wait;
 
     public Page(WebDriver driver) {
         this.driver = driver;

@@ -1,8 +1,11 @@
-package user.co.jatri.pages;
+package user.co.jatri.pages.home;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import user.co.jatri.pages.auth.LoginPage;
+import user.co.jatri.pages.search.SearchBookingPage;
+import user.co.jatri.pages.base.BasePage;
 import user.co.jatri.utils.MultimodalUserUtil;
 
 public class HomePage extends BasePage {

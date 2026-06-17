@@ -1,10 +1,11 @@
-package user.co.jatri.test;
+package user.co.jatri.test.search;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import user.co.jatri.pages.HomePage;
-import user.co.jatri.pages.SearchBookingPage;
-import user.co.jatri.pages.ServiceSelectionPage;
+import user.co.jatri.pages.home.HomePage;
+import user.co.jatri.pages.search.SearchBookingPage;
+import user.co.jatri.pages.service.ServiceSelectionPage;
+import user.co.jatri.test.base.BaseTest;
 import user.co.jatri.utils.MultimodalUserUtil;
 
 public class SearchBookingTest extends BaseTest {

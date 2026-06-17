@@ -1,12 +1,13 @@
-package user.co.jatri.pages;
+package user.co.jatri.pages.service.bus;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import user.co.jatri.pages.base.BasePage;
 import user.co.jatri.utils.MultimodalUserUtil;
 
-public class BookingSuccessOrFailedPage extends BasePage{
+public class BookingSuccessOrFailedPage extends BasePage {
     public BookingSuccessOrFailedPage(WebDriver driver) {
         super(driver);
     }

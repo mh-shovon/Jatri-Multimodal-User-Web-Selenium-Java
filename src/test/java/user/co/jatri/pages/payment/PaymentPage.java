@@ -1,9 +1,11 @@
-package user.co.jatri.pages;
+package user.co.jatri.pages.payment;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import user.co.jatri.pages.service.bus.BookingSuccessOrFailedPage;
+import user.co.jatri.pages.base.BasePage;
 
 public class PaymentPage extends BasePage {
     public PaymentPage(WebDriver driver) {
@@ -12,7 +14,6 @@ public class PaymentPage extends BasePage {
 
     final By bkashNumberField = By.xpath("//input[@id='WALLET']");
     final By confirmButton = By.xpath("//button[normalize-space()='Confirm']");
-    final By successMessage = By.xpath("//h5[normalize-space()='Your Bus Ticket Booking is Confirmed']");
 
     final By otpField = By.xpath("//input[@id='OTP' or @type='text' or @type='password']");
     final By pinField = By.xpath("//input[@id='PIN' or @type='password']");

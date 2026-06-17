@@ -1,4 +1,4 @@
-package user.co.jatri.pages;
+package user.co.jatri.pages.auth;
 
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;

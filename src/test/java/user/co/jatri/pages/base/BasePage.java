@@ -1,4 +1,4 @@
-package user.co.jatri.pages;
+package user.co.jatri.pages.base;
 
 import com.aventstack.extentreports.Status;
 import org.openqa.selenium.By;

@@ -1,9 +1,9 @@
-package user.co.jatri.pages;
+package user.co.jatri.pages.auth;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
+import user.co.jatri.pages.base.BasePage;
 import user.co.jatri.utils.MultimodalUserUtil;
 
 public class LoginPage extends BasePage {

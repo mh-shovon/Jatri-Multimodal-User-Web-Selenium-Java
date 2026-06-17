@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-import user.co.jatri.test.BaseTest;
+import user.co.jatri.test.base.BaseTest;
 
 public class TestListener implements ITestListener {
     private static String getTestMethodName(ITestResult iTestResult) {

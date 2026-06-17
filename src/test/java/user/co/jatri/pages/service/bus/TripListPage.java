@@ -1,8 +1,9 @@
-package user.co.jatri.pages;
+package user.co.jatri.pages.service.bus;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import user.co.jatri.pages.base.BasePage;
 import user.co.jatri.utils.MultimodalUserUtil;
 
 import java.time.Duration;

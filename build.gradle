@@ -30,8 +30,11 @@ dependencies {
     // https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver
     testImplementation 'org.mongodb:mongo-java-driver:3.12.14'
 
-    // https://mvnrepository.com/artifact/io.github.cdimascio/java-dotenv
-    implementation 'io.github.cdimascio:java-dotenv:5.2.2'
+    // Source: https://mvnrepository.com/artifact/io.github.cdimascio/java-dotenv
+    testImplementation 'io.github.cdimascio:java-dotenv:5.2.2'
+
+    // Source: https://mvnrepository.com/artifact/io.github.cdimascio/dotenv-java
+    testImplementation 'io.github.cdimascio:dotenv-java:3.2.0'
 }
 
 test {

@@ -1,9 +1,11 @@
-package user.co.jatri.test;
+package user.co.jatri.test.bus;
 
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import user.co.jatri.pages.*;
+import user.co.jatri.pages.home.HomePage;
+import user.co.jatri.pages.payment.SelectingPaymentMethodPage;
+import user.co.jatri.pages.service.bus.SeatViewPage;
+import user.co.jatri.test.base.BaseTest;
 
 public class SeatViewTest extends BaseTest {
     @Test(priority = 1)

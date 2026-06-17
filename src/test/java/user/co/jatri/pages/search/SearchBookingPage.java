@@ -1,7 +1,10 @@
-package user.co.jatri.pages;
+package user.co.jatri.pages.search;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import user.co.jatri.pages.service.ServiceSelectionPage;
+import user.co.jatri.pages.service.bus.TripListPage;
+import user.co.jatri.pages.base.BasePage;
 import user.co.jatri.utils.MultimodalUserUtil;
 
 import java.time.LocalDate;

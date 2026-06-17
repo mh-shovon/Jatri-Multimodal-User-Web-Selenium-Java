@@ -1,10 +1,10 @@
-package user.co.jatri.test;
+package user.co.jatri.test.bus;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import user.co.jatri.pages.HomePage;
-import user.co.jatri.pages.SeatViewPage;
-import user.co.jatri.pages.TripListPage;
+import user.co.jatri.pages.home.HomePage;
+import user.co.jatri.pages.service.bus.TripListPage;
+import user.co.jatri.test.base.BaseTest;
 
 public class TripListTest extends BaseTest {
     @Test (priority = 1)

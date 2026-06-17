@@ -1,15 +1,12 @@
-package user.co.jatri.pages;
+package user.co.jatri.pages.payment;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import user.co.jatri.pages.base.BasePage;
 import user.co.jatri.utils.MultimodalUserUtil;
-
-import javax.swing.plaf.PanelUI;
-import java.time.Duration;
 
 public class SelectingPaymentMethodPage extends BasePage {
 

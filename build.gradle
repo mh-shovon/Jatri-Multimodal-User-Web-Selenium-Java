@@ -37,6 +37,11 @@ dependencies {
     testImplementation 'io.github.cdimascio:dotenv-java:3.2.0'
 }
 
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
 test {
     useTestNG()
+    systemProperty "file.encoding", "UTF-8"
 }

@@ -43,5 +43,5 @@ tasks.withType(JavaCompile).configureEach {
 
 test {
     useTestNG()
-    systemProperty "file.encoding", "UTF-8"
+    systemProperty "file.encoding", "UTF-8" //for bangla and other non-english characters
 }

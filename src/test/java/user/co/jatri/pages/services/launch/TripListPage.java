@@ -7,5 +7,6 @@ public class TripListPage extends BasePage {
     public TripListPage (WebDriver driver){
         super(driver);
         System.out.println("new setup");
+        System.out.println("new setup");
     }
 }

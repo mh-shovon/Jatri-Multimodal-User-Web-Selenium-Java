@@ -6,6 +6,6 @@ import user.co.jatri.pages.base.BasePage;
 public class TripListPage extends BasePage {
     public TripListPage (WebDriver driver){
         super(driver);
-
+        System.out.println("new setup");
     }
 }

@@ -59,11 +59,13 @@ public class LoginTest extends BaseTest {
     @Test(priority = 6)
     public void checkGetOtpWithValidMobileNumberShouldSucceed() throws InterruptedException {
         String phoneNumber = getNewUserMobileNumber();
-        LoginPage loginPage = page.goTo(HomePage.class)
+        HomePage homePage = page.goTo(HomePage.class)
                 .clickAcceptAllCookiesBtn()
                 .clickOnLoginButton()
                 .enterUserMobileNumber(phoneNumber)
                 .clickOnGetOtpButtonForSuccess()
-                .setOtp(phoneNumber);
+                .setOtp(phoneNumber)
+                .clickOnConfirmButtonForSuccess();
+        Assert.assertNotNull(homePage.isProfileIconDisplayed());
     }
 }

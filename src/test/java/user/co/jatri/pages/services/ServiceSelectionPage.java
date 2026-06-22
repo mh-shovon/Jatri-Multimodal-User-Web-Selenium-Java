@@ -15,7 +15,7 @@ public class ServiceSelectionPage extends BasePage {
     }
 
     public TripListPage navigateToTripListPage() {
-        By tripMainContainer = By.cssSelector("body > div:nth-child(1) > div:nth-child(1) > main:nth-child(2) > div:nth-child(1) > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1)");
+        By tripMainContainer = By.cssSelector("div[class='space-y-6 lg:space-y-2']");
         System.out.println("=== Waiting for the specific trip container to load (Max 60 seconds) ===");
         try {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));

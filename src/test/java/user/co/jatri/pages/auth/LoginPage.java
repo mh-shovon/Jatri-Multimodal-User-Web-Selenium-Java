@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import user.co.jatri.pages.base.BasePage;
+import user.co.jatri.pages.home.HomePage;
 import user.co.jatri.utils.MultimodalUserUtil;
 
 public class LoginPage extends BasePage {
@@ -72,6 +73,11 @@ public class LoginPage extends BasePage {
         getWebElement(By.xpath("//input[@id='otp']")).sendKeys(otp);
         System.out.println("OTP Code is: " + otp);
         return goTo(LoginPage.class);
+    }
+
+    public HomePage clickOnConfirmButtonForSuccess() {
+        clickElement(By.xpath("//span[normalize-space()='Confirm']"));
+        return goTo(HomePage.class);
     }
 
 }

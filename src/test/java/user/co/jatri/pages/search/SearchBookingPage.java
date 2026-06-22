@@ -71,14 +71,14 @@ public class SearchBookingPage extends BasePage {
 
     public SearchBookingPage clickOnSearchButtonForFailed() {
         MultimodalUserUtil.waitForDomStable(500);
-        clickElement(By.xpath("//*[@id=\"__nuxt\"]/div/main/div/section[1]/div/div/div[4]/button"));
+        clickElement(By.xpath("//span[normalize-space()='Search']"));
         MultimodalUserUtil.waitForDomStable(500);
         return goTo(SearchBookingPage.class);
     }
 
     public ServiceSelectionPage clickOnSearchButtonForSuccess() {
         MultimodalUserUtil.waitForDomStable(500);
-        clickElement(By.xpath("//*[@id=\"__nuxt\"]/div/main/div/section[1]/div/div/div[4]/button"));
+        clickElement(By.xpath("//span[normalize-space()='Search']"));
         MultimodalUserUtil.waitForDomStable(2000);
         return goTo(ServiceSelectionPage.class);
     }

@@ -191,8 +191,12 @@ public class TripListPage extends BasePage {
 //    }
 
     public SeatViewPage selectTripByCompanyNameAndTripNumber(String companyName, String tripNumber) {
-        By cartLocator = By.xpath("//main//section/div/div/div/div/div[2]/div[1]/div[3]/div");
-
+        By cartLocator = By.cssSelector(
+                "body > div:nth-child(1) > div:nth-child(2) > main:nth-child(2) > " +
+                        "div:nth-child(1) > section:nth-child(2) > div:nth-child(1) > " +
+                        "div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > " +
+                        "div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1)"
+        );
         System.out.println("=== Safe Check: Waiting for the first trip card to render before doing any action... ===");
 
         try {
@@ -211,12 +215,19 @@ public class TripListPage extends BasePage {
         int maxScrollAttempts = 30;
 
         for (int attempt = 0; attempt < maxScrollAttempts; attempt++) {
-            List<WebElement> allCarts = driver.findElements(By.xpath("//main//section/div/div/div/div/div[2]/div[1]/div[3]/div"));
+            By allCartLocator = By.cssSelector(
+                    "body > div:nth-child(1) > div:nth-child(2) > main:nth-child(2) > " +
+                            "div:nth-child(1) > section:nth-child(2) > div:nth-child(1) > " +
+                            "div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > " +
+                            "div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div"
+            );
+
+            List<WebElement> allCarts = driver.findElements(allCartLocator);
 
             for (WebElement cart : allCarts) {
                 try {
                     String uiCompanyName = cart.findElement(By.xpath(".//h4")).getText().trim();
-                    String uiTripNumber = cart.findElement(By.xpath(".//p[contains(@class, 'text-dark-shade2') or ./following-sibling::p or @class]")).getText().trim();
+                    String uiTripNumber = cart.findElement(By.xpath(".//p[contains(@class,'mt-0.5 truncate text-xs text-dark-shade2')]")).getText().trim();
 
                     if (uiCompanyName.contains(companyName) && uiTripNumber.equalsIgnoreCase(tripNumber)) {
                         System.out.println("🎯 Match Found! Company: " + uiCompanyName + " [" + uiTripNumber + "]");

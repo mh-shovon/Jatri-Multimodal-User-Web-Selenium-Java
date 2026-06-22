@@ -14,6 +14,7 @@ public class HomePage extends BasePage {
     }
 
     public HomePage isCookieBannerDisplayed() {
+        MultimodalUserUtil.waitForDomStable(2000);
         getWebElement(By.cssSelector("div[role='dialog']"));
         return goTo(HomePage.class);
     }
@@ -67,6 +68,12 @@ public class HomePage extends BasePage {
         clickElement(By.xpath("//span[@class='hidden md:block !text-base']"));
 
         return goTo(LoginPage.class);
+    }
+
+    public HomePage isProfileIconDisplayed() {
+        MultimodalUserUtil.waitForDomStable(5000);
+        getWebElement(By.cssSelector("#radix-vue-dropdown-menu-trigger-v-2-4-0")).isDisplayed();
+        return goTo(HomePage.class);
     }
 
 }

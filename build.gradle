@@ -16,7 +16,7 @@ dependencies {
     // Source: https://mvnrepository.com/artifact/org.testng/testng
     testImplementation 'org.testng:testng:7.12.0'
 
-    //dummy text generator
+    // dummy text generator
     // Source: https://mvnrepository.com/artifact/com.thedeanda/lorem
     testImplementation 'com.thedeanda:lorem:2.1'
 
@@ -30,11 +30,7 @@ dependencies {
     // https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver
     testImplementation 'org.mongodb:mongo-java-driver:3.12.14'
 
-    // Source: https://mvnrepository.com/artifact/io.github.cdimascio/java-dotenv
-    testImplementation 'io.github.cdimascio:java-dotenv:5.2.2'
-
-    // Source: https://mvnrepository.com/artifact/io.github.cdimascio/dotenv-java
-    testImplementation 'io.github.cdimascio:dotenv-java:3.2.0'
+    implementation 'io.github.cdimascio:dotenv-java:3.2.0'
 }
 
 tasks.withType(JavaCompile).configureEach {

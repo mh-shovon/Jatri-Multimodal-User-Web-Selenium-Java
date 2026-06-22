@@ -28,7 +28,7 @@ public class SeatViewPage extends BasePage {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(MultimodalUserUtil.WAIT_TIME));
             WebElement panel = wait.until(
                     ExpectedConditions.visibilityOfElementLocated(
-                            By.cssSelector("body > div:nth-child(1) > div:nth-child(1) > main:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1)"))
+                            By.cssSelector("body > div:nth-child(1) > div:nth-child(2) > main:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1)"))
             );
             boolean isDisplayed = panel.isDisplayed();
             System.out.println("=== Selected Seat Panel isDisplayed: " + isDisplayed + " ===");
@@ -112,7 +112,7 @@ public class SeatViewPage extends BasePage {
     final By femaleGenderRadio = By.xpath("//div[contains(text(), 'Female')] | //label[contains(., 'Female')]");
     final By mobileNumberInput = By.xpath("//input[contains(@placeholder, 'Enter mobile number')]");
     final By emailAddressInput = By.xpath("//input[contains(@placeholder, 'Enter your email address')]");
-    final By continueButton    = By.xpath("//button[contains(., 'Continue')]");
+    final By continueButton    = By.xpath("//span[normalize-space()='Continue']");
 
     public SelectingPaymentMethodPage fillBookingDetailsAndContinue(String boarding, String dropping, String firstName, String lastName, String gender, String mobile, String email) {
         try {

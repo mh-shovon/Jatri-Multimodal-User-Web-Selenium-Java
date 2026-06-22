@@ -1,5 +1,6 @@
 package user.co.jatri.test.services.bus;
 
+import io.github.cdimascio.dotenv.Dotenv;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import user.co.jatri.pages.services.bus.BookingSuccessOrFailedPage;
@@ -13,38 +14,40 @@ import java.util.Properties;
 public class PurchaseSingleSeatWithBkashTest extends BaseTest {
     @Test(priority = 1)
     public void purchaseSingleSeatWithBkash() throws InterruptedException {
-//        String bkashNumber = System.getenv("BKASH_NUMBER");
-//        String otpCode = System.getenv("BKASH_OTP");
-//        String pinCode = System.getenv("BKASH_PIN");
-//
-//        if (bkashNumber == null || otpCode == null || pinCode == null) {
-//            System.out.println("Error: One or more environment variables (BKASH_NUMBER, BKASH_OTP, BKASH_PIN) are missing!");
-//            Assert.fail("Test failed due to missing Environment Variables.");
-//        }
+        Dotenv dotenv = Dotenv.configure().ignoreIfMissing().load();
 
-        Properties prop = new Properties();
-        String bkashNumber = "";
-        String otpCode = "";
-        String pinCode = "";
-
-        try {
-            String configFilePath = "src/test/resources/config.properties";
-            FileInputStream fis = new FileInputStream(configFilePath);
-            prop.load(fis);
-
-            bkashNumber = prop.getProperty("BKASH_NUMBER");
-            otpCode     = prop.getProperty("BKASH_OTP");
-            pinCode     = prop.getProperty("BKASH_PIN");
-
-        } catch (IOException e) {
-            System.err.println("Could not load config.properties file: " + e.getMessage());
-            Assert.fail("Test failed due to missing or unreadable config.properties file.");
-        }
+        String bkashNumber = System.getenv("BKASH_NUMBER") != null ? System.getenv("BKASH_NUMBER") : dotenv.get("BKASH_NUMBER");
+        String otpCode     = System.getenv("BKASH_OTP") != null ? System.getenv("BKASH_OTP") : dotenv.get("BKASH_OTP");
+        String pinCode     = System.getenv("BKASH_PIN") != null ? System.getenv("BKASH_PIN") : dotenv.get("BKASH_PIN");
 
         if (bkashNumber == null || otpCode == null || pinCode == null) {
-            System.err.println("Error: One or more properties (BKASH_NUMBER, BKASH_OTP, BKASH_PIN) are missing inside config.properties!");
-            Assert.fail("Test failed due to missing properties data.");
+            System.out.println("Error: One or more environment variables (BKASH_NUMBER, BKASH_OTP, BKASH_PIN) are missing!");
+            Assert.fail("Test failed due to missing Environment Variables.");
         }
+
+//        Properties prop = new Properties();
+//        String bkashNumber = "";
+//        String otpCode = "";
+//        String pinCode = "";
+//
+//        try {
+//            String configFilePath = "src/test/resources/config.properties";
+//            FileInputStream fis = new FileInputStream(configFilePath);
+//            prop.load(fis);
+//
+//            bkashNumber = prop.getProperty("BKASH_NUMBER");
+//            otpCode     = prop.getProperty("BKASH_OTP");
+//            pinCode     = prop.getProperty("BKASH_PIN");
+//
+//        } catch (IOException e) {
+//            System.err.println("Could not load config.properties file: " + e.getMessage());
+//            Assert.fail("Test failed due to missing or unreadable config.properties file.");
+//        }
+//
+//        if (bkashNumber == null || otpCode == null || pinCode == null) {
+//            System.err.println("Error: One or more properties (BKASH_NUMBER, BKASH_OTP, BKASH_PIN) are missing inside config.properties!");
+//            Assert.fail("Test failed due to missing properties data.");
+//        }
 
         BookingSuccessOrFailedPage bookingSuccessOrFailedPage = page.goTo(HomePage.class)
                 .isCookieBannerDisplayed()
@@ -63,7 +66,7 @@ public class PurchaseSingleSeatWithBkashTest extends BaseTest {
                 .fillBookingDetailsAndContinue("Gabtoli Counter-1", "Cox's Bazar Sadar Counter", "DT", "Test", "Male", "01983285059", "mhshovon.jatri@gmail.com")
 //          .fillBookingDetailsAndContinue("ABDULLAHPUR", "KOLATOLI", "DT", "Test", "Male", "01983285059", "mhshovon.jatri@gmail.com")
                 .navigateToSelectingPaymentMethodPage()
-                .selectBkashPaymentMethod()
+                 .selectBkashPaymentMethod()
                 .clickOnProceedToPaymentButton()
                 .completeBkashPaymentProcess(bkashNumber, otpCode, pinCode)
                 .navigateToBookingSuccessOrFailedPage();

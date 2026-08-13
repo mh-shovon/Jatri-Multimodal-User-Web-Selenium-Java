@@ -3,6 +3,7 @@ package user.co.jatri.pages.home;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import user.co.jatri.pages.auth.LoginPage;
 import user.co.jatri.pages.search.SearchBookingPage;
 import user.co.jatri.pages.base.BasePage;
@@ -15,13 +16,15 @@ public class HomePage extends BasePage {
 
     public HomePage isCookieBannerDisplayed() {
         MultimodalUserUtil.waitForDomStable(2000);
-        getWebElement(By.cssSelector("div[role='dialog']"));
+        boolean isDisplayed = getWebElement(By.cssSelector("div[role='dialog']")) != null;
+        Assert.assertTrue(isDisplayed, "Cookie banner should be displayed");
         return goTo(HomePage.class);
     }
 
     public HomePage isCookieBannerHide() {
         MultimodalUserUtil.waitForDomStable(500);
         boolean isHidden = getWebElements(By.cssSelector("div[role='dialog']")).isEmpty();
+        Assert.assertTrue(isHidden, "Cookie banner should be hidden");
         return goTo(HomePage.class);
     }
 

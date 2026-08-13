@@ -28,7 +28,7 @@ public class SeatViewPage extends BasePage {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(MultimodalUserUtil.WAIT_TIME));
             WebElement panel = wait.until(
                     ExpectedConditions.visibilityOfElementLocated(
-                            By.cssSelector("body > div:nth-child(1) > div:nth-child(2) > main:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1)"))
+                            By.cssSelector("[data-testid='available-seat-layout']"))
             );
             boolean isDisplayed = panel.isDisplayed();
             System.out.println("=== Selected Seat Panel isDisplayed: " + isDisplayed + " ===");
@@ -40,8 +40,8 @@ public class SeatViewPage extends BasePage {
     }
 
     public SeatViewPage selectSingleSeatFromSeatView() {
-        By ALL_SEATS     = By.cssSelector("div div div div div div div div div div div div button[class] svg[fill='none']");
-        By BLOCKED_SEATS = By.cssSelector("div div div div div div div div div div div div button[disabled]");
+        By ALL_SEATS     = By.cssSelector("[data-testid='all-seat']");
+        By BLOCKED_SEATS = By.cssSelector("[data-testid='sold-or-blocked-seat']");
 
         MultimodalUserUtil.waitForDomStable(2000);
 

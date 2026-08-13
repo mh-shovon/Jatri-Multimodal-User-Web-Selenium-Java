@@ -92,7 +92,7 @@ public class SeatViewPage extends BasePage {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(MultimodalUserUtil.WAIT_TIME));
             WebElement selectedSeats = wait.until(
                     ExpectedConditions.visibilityOfElementLocated(
-                            By.cssSelector("//div[@class='pointer-events-none']"))
+                            By.cssSelector("[data-testid='selected-seats']"))
             );
             boolean isDisplayed = selectedSeats.isDisplayed();
             System.out.println("=== Selected Seats are Displayed: " + isDisplayed + " ===");
